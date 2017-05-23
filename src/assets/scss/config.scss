@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+input {
+  border: 2px solid #40aaff;
+  height: 30px;
+  width: 200px;
+  line-height: 26px;
+  text-indent: .5em;
+  font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+button {
+  height: 35px;
+  width: 60px;
+  background: #40aaff;
+  border: none;
+  color: #FFFFFF;
+  margin-left: 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b96ff;
+}

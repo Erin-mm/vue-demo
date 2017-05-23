@@ -1,0 +1,14 @@
+const USERS = 'USERS'
+const DELETE_USER = 'DELETE_USER'
+const ADD_USER = 'ADD_USER'
+const ONE_USER = 'ONE_USER'
+const EDIT_USER = 'EDIT_USER'
+const CHANGE_USER = 'CHANGE_USER'
+export{
+  USERS,
+  DELETE_USER,
+  ADD_USER,
+  ONE_USER,
+  EDIT_USER,
+  CHANGE_USER
+}
