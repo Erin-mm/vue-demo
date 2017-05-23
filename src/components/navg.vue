@@ -10,7 +10,6 @@
 </template>
 <script>
   import auth from '../auth'
-  //  import api from '../config/api'
   export default{
     name: 'navg',
     methods: {

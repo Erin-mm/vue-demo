@@ -23,22 +23,14 @@ const requireAuth = (to, from, next) => {
   }
 };
 
-// 退出
-// const quitDemo = (to, from, next)=>{
-//   auth.logout()
-//   let name = 'world'
-//   this.$store.dispatch('getUser',name)
-//   next('/login')
-// }
-
 const router = new VueRouter({
   routes: [
+    {path: '/', component: home, beforeEnter: requireAuth},
     {path: '/home', component: home, name: 'home', beforeEnter: requireAuth},
     {path: '/user', component: user, name: 'user', beforeEnter: requireAuth},
     {path: '/login', component: login, name: 'login'},
     {path: '/create', component: create, name: 'create'},
     {path: '/modify/:id', component: modify, name: 'modify'}
-    // {path: '/logout', name: 'logout', beforeEnter: quitDemo}
   ]
 })
 
