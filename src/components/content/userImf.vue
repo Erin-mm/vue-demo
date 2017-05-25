@@ -6,10 +6,10 @@
         <em>{{user.id}}</em>
         <span>{{user.name}}</span>
         <i class="delete" @click="onDelete(user)">delete</i>
-        <router-link class="modify" @click="onModify(user)" :to="'/modify/' + user.id" tag="i">modify</router-link>
+        <router-link class="modify" @click="onModify(user)" :to="'/user/modify/' + user.id" tag="i">modify</router-link>
       </li>
     </ul>
-    <router-link to="/create" tag="span" class="add">+ add a new user</router-link>
+    <router-link to="/user/create" tag="span" class="add">+ add a new user</router-link>
   </div>
 </template>
 <script>

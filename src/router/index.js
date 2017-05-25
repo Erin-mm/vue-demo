@@ -4,8 +4,9 @@ import auth from '../auth'
 Vue.use(VueRouter)
 
 const home = resolve => require(['../components/content/home'], resolve)
-const user = resolve => require(['../components/content/userImf'], resolve)
+const user = resolve => require(['../components/content/user'], resolve)
 const login = resolve => require(['../components/content/login'], resolve)
+const userImf = resolve => require(['../components/content/userImf'], resolve)
 const create = resolve => require(['../components/content/create'], resolve)
 const modify = resolve => require(['../components/content/modify'], resolve)
 
@@ -21,16 +22,21 @@ const requireAuth = (to, from, next) => {
   } else {
     next()
   }
-};
+}
 
 const router = new VueRouter({
   routes: [
     {path: '/', component: home, beforeEnter: requireAuth},
     {path: '/home', component: home, name: 'home', beforeEnter: requireAuth},
-    {path: '/user', component: user, name: 'user', beforeEnter: requireAuth},
     {path: '/login', component: login, name: 'login'},
-    {path: '/create', component: create, name: 'create'},
-    {path: '/modify/:id', component: modify, name: 'modify'}
+    {
+      path: '/user', component: user, name: 'user', beforeEnter: requireAuth,
+      children: [
+        {path: '', component: userImf, name: 'userImf'},
+        {path: 'create', component: create, name: 'create'},
+        {path: 'modify/:id', component: modify, name: 'modify'}
+      ]
+    }
   ]
 })
 

@@ -11,11 +11,12 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "axios": "^0.16.1",
+    "babel-polyfill": "^6.23.0",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1",
     "vuex": "^2.3.1",
-    "babel-polyfill": "^6.23.0",
-    "axios": "^0.16.1"
+    "vuex-persistedstate": "^1.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
