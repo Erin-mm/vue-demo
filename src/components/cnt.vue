@@ -9,6 +9,7 @@
 <style>
 .content{
   float: left;
-  padding:15px;
+  padding-left:120px;
+  width:100%;
 }
 </style>

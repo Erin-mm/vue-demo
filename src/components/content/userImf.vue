@@ -24,7 +24,7 @@
       if (this.$store.state.users.length) {
         this.users = this.$store.state.users;
       } else {
-        this.$store.dispatch('getUsers');
+        this.$store.dispatch('getUsers')
       }
     },
     methods: {

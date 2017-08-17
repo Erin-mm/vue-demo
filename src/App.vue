@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <navg></navg>
     <cnt></cnt>
   </div>
@@ -14,3 +14,23 @@
     }
   }
 </script>
+<style>
+  body,html{
+    height:100%;
+  }
+  div,p,ul,li{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ul,li{
+    margin:0;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  .app{
+    height:100%;
+  }
+</style>

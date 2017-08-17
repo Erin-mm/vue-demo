@@ -22,11 +22,13 @@
     }
   }
 </script>
-<style>
+<style lang="scss" rel="stylesheet/scss" scoped>
   .nav {
-    float: left;
+    position: absolute;
+    top:0;
+    left:0;
     background: #40aaff;
-    height: 200px;
+    height: 100%;
     width: 120px;
     color: #ffffff;
   }
@@ -44,6 +46,9 @@
     list-style: none;
     padding: 10px;
     cursor: pointer;
+    &:hover{
+      color: #cfd4ff;
+    }
   }
 
   .active {
@@ -58,6 +63,6 @@
   }
 
   .quit:hover {
-    color: #8c77f8;
+    color: #cfd4ff;
   }
 </style>

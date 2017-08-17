@@ -1,0 +1,52 @@
+{
+  "corp": {
+    "id": 37,
+    "name": "大陆集团",
+    "province": "内蒙古自治区",
+    "city": "乌海市",
+    "district": "海勃湾区",
+    "location": "清水颐园11号1102室",
+    "address": "内蒙古自治区乌海市海勃湾区清水颐园11号1102室",
+    "office_province": "河北省",
+    "office_city": "唐山市",
+    "office_district": "路南区",
+    "office_location": "巴拉巴拉119号",
+    "office_address": "河北省唐山市路南区巴拉巴拉119号",
+    "auth_status": "verified",
+    "status": "effective",
+    "category": "admin",
+    "user": {
+      "id": 53,
+      "name": "superadmin",
+      "phone_number": "18888888502",
+      "fixed_phone": null,
+      "gender": null,
+      "position": null,
+      "created_at": "2017-06-05T09:42:49+08:00",
+      "updated_at": "2017-06-09T11:49:51+08:00"
+    },
+    "created_at": "2017-06-08T14:00:32+08:00",
+    "updated_at": "2017-06-09T10:11:00+08:00",
+    "owner": {
+      "id": 67,
+      "name": "ymmmy",
+      "phone_number": "13781245125",
+      "fixed_phone": "021-55555555",
+      "gender": false,
+      "position": "经理",
+      "created_at": "2017-06-08T14:00:32+08:00",
+      "updated_at": "2017-06-08T14:00:32+08:00",
+      "status": "active"
+    },
+    "certifications": [
+      {
+        "id": 14,
+        "name": "nezha.jpg",
+        "category": null,
+        "url": "http://ooa9k48lx.bkt.clouddn.com/uploads/certification/file/14/076d0adb-37f3-4e46-929f-b633c0e861c0.?e=1496984221\u0026token=0Cgu8PwGJZlSFv1OVBVE2QsJrkKqDqw3PRPqfe91:Spz502IbT6pBLxvFd-fVbLBsG2k=",
+        "created_at": "2017-06-08T14:00:32+08:00",
+        "updated_at": "2017-06-08T14:00:32+08:00"
+      }
+    ]
+  }
+}
