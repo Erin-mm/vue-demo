@@ -12,8 +12,10 @@ const modify = resolve => require(['../components/content/modify'], resolve)
 
 //测试入口
 const test = resolve => require(['../components/test/test'], resolve)
-const watchTest = resolve => require(['../components/test/watch-test'], resolve)
-const globalWatcher = resolve => require(['../components/test/globalWatcher'], resolve)
+const watchTest = resolve => require(['../components/test/watch-test'], resolve)//无限树
+const globalWatcher = resolve => require(['../components/test/globalWatcher'], resolve) //全局监听
+const regularExpression = resolve => require(['../components/test/regularExpression'], resolve) //正则表达式
+const accordions = resolve => require(['../components/test/accordions'], resolve) //折叠面板
 
 
 // 设置登录权限
@@ -38,6 +40,8 @@ const router = new VueRouter({
     children:[
       {path: '/test-watch', component: watchTest, name: 'watchTest'},
       {path: '/global-watcher', component: globalWatcher, name: 'globalWatcher'},
+      {path: '/regularExpression', component: regularExpression, name: 'regularExpression'},
+      {path: '/accordions', component: accordions, name: 'accordions'},
     ]
     },
     {path: '/login', component: login, name: 'login'},
