@@ -13,6 +13,7 @@ const modify = resolve => require(['../components/content/modify'], resolve)
 //测试入口
 const test = resolve => require(['../components/test/test'], resolve)
 const watchTest = resolve => require(['../components/test/watch-test'], resolve)
+const jsLearning = resolve => require(['../components/test/jsLearning'], resolve)
 
 
 // 设置登录权限
@@ -36,6 +37,7 @@ const router = new VueRouter({
     {path: '/test', component: test, name: 'test', beforeEnter: requireAuth,
     children:[
       {path: '/test-watch', component: watchTest, name: 'watchTest'},
+      {path: '/js-learning', component: jsLearning, name: 'jsLearning'},
     ]
     },
     {path: '/login', component: login, name: 'login'},
