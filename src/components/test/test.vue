@@ -2,13 +2,21 @@
   <div class="test">
     <ul>
       <li><router-link :to="{name:'watchTest'}">watch</router-link></li>
+<<<<<<< HEAD
       <li><router-link :to="{name:'jsLearning'}">jsLearning</router-link></li>
+=======
+      <li><router-link :to="{name:'globalWatcher'}">全局监听方法</router-link></li>
+      <li><router-link :to="{name:'regularExpression'}">正则表达式</router-link></li>
+      <li><router-link :to="{name:'accordions'}">折叠面板</router-link></li>
+>>>>>>> 453af97417b58a03b0513b17cbf8f86d2dc69959
     </ul>
     <router-view class="display-box"></router-view>
   </div>
 </template>
 <script>
-	export default{}
+	export default{
+
+  }
 </script>
 <style lang="scss" rel="stylesheet/scss" scoped>
   .test{
