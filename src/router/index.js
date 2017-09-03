@@ -12,57 +12,57 @@ const modify = resolve => require(['../components/content/modify'], resolve)
 
 //测试入口
 const test = resolve => require(['../components/test/test'], resolve)
-<<<<<<< HEAD
 const watchTest = resolve => require(['../components/test/watch-test'], resolve)
 const jsLearning = resolve => require(['../components/test/jsLearning'], resolve)
-=======
-const watchTest = resolve => require(['../components/test/watch-test'], resolve)//无限树
+const watchTest = resolve => require(['../components/test/watch-test'], resolve) //无限树
 const globalWatcher = resolve => require(['../components/test/globalWatcher'], resolve) //全局监听
 const regularExpression = resolve => require(['../components/test/regularExpression'], resolve) //正则表达式
 const accordions = resolve => require(['../components/test/accordions'], resolve) //折叠面板
->>>>>>> 453af97417b58a03b0513b17cbf8f86d2dc69959
 
 
 // 设置登录权限
 const requireAuth = (to, from, next) => {
-  if (!auth.loggedIn()) {
-    next({
-      path: '/login',
-      query: {
-        redirect: to.fullPath
-      }
-    })
-  } else {
-    next()
-  }
+    if (!auth.loggedIn()) {
+        next({
+            path: '/login',
+            query: {
+                redirect: to.fullPath
+            }
+        })
+    } else {
+        next()
+    }
 }
 
 const router = new VueRouter({
-  routes: [
-    {path: '/', component: home, beforeEnter: requireAuth},
-    {path: '/home', component: home, name: 'home', beforeEnter: requireAuth},
-    {path: '/test', component: test, name: 'test', beforeEnter: requireAuth,
-    children:[
-      {path: '/test-watch', component: watchTest, name: 'watchTest'},
-<<<<<<< HEAD
-      {path: '/js-learning', component: jsLearning, name: 'jsLearning'},
-=======
-      {path: '/global-watcher', component: globalWatcher, name: 'globalWatcher'},
-      {path: '/regularExpression', component: regularExpression, name: 'regularExpression'},
-      {path: '/accordions', component: accordions, name: 'accordions'},
->>>>>>> 453af97417b58a03b0513b17cbf8f86d2dc69959
+    routes: [
+        { path: '/', component: home, beforeEnter: requireAuth },
+        { path: '/home', component: home, name: 'home', beforeEnter: requireAuth },
+        {
+            path: '/test',
+            component: test,
+            name: 'test',
+            beforeEnter: requireAuth,
+            children: [
+                { path: '/test-watch', component: watchTest, name: 'watchTest' },
+                { path: '/js-learning', component: jsLearning, name: 'jsLearning' },
+                { path: '/global-watcher', component: globalWatcher, name: 'globalWatcher' },
+                { path: '/regularExpression', component: regularExpression, name: 'regularExpression' },
+                { path: '/accordions', component: accordions, name: 'accordions' },
+            ]
+        },
+        { path: '/login', component: login, name: 'login' },
+        {
+            path: '/user',
+            component: user,
+            beforeEnter: requireAuth,
+            children: [
+                { path: '', component: userImf, name: 'userImf' },
+                { path: 'create', component: create, name: 'create' },
+                { path: 'modify/:id', component: modify, name: 'modify' }
+            ]
+        }
     ]
-    },
-    {path: '/login', component: login, name: 'login'},
-    {
-      path: '/user', component: user, beforeEnter: requireAuth,
-      children: [
-        {path: '', component: userImf, name: 'userImf'},
-        {path: 'create', component: create, name: 'create'},
-        {path: 'modify/:id', component: modify, name: 'modify'}
-      ]
-    }
-  ]
 })
 
 export default router
