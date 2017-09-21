@@ -8,8 +8,7 @@
       Change the Message
     </span>
     <span>这里是测试环境</span>
-    <span>add 1</span>
-    <span>add 2</span>
+    <span>来，让我们看看有什么变化</span>
   </div>
 </template>
 <script>
