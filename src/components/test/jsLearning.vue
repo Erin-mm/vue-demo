@@ -7,6 +7,7 @@
     <span @click="changeMsg">
       Change the Message
     </span>
+    <span>这是开发环境</span>
   </div>
 </template>
 <script>
