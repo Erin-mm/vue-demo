@@ -1,24 +1,45 @@
 <template>
-<div>
-{{st('1')}}
-</div>
+  <div class="app">
+    <div ref="msgDiv">{{msg}}</div>
+    <div v-if="msg1">Message got outside $nextTick: {{msg1}}</div>
+    <div v-if="msg2">Message got inside $nextTick: {{msg2}}</div>
+    <div v-if="msg3">Message got outside $nextTick: {{msg3}}</div>
+    <span @click="changeMsg">
+      Change the Message
+    </span>
+  </div>
 </template>
 <script>
-export default{
-beforeCreate () {
-  this.st('0')
-},
-created () {
-  this.st('1')
-},
- mounted () {
-   this.st('2')
- },
-  methods: {
-    st(s){
-      var arr = s.split('')
-      console.log(arr)
+  var name = "The Window";
+  var object = {
+    name : "My Object",
+    getNameFunc : function(){
+    	var that = this
+      return function(){
+        return that.name;
+      };
+    }
+  };
+  alert(object.getNameFunc()());
+
+  export default{
+  	data(){
+  		return{
+        msg: 'Hello Vue.',
+        msg1: '',
+        msg2: '',
+        msg3: ''
+      }
+    },
+    methods:{
+      changeMsg() {
+        this.msg = "Hello world."
+        this.msg1 = this.$refs.msgDiv.innerHTML
+        this.$nextTick(() => {
+          this.msg2 = this.$refs.msgDiv.innerHTML
+        })
+        this.msg3 = this.$refs.msgDiv.innerHTML
+      }
     }
   }
-}
 </script>

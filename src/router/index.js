@@ -12,7 +12,6 @@ const modify = resolve => require(['../components/content/modify'], resolve)
 
 //测试入口
 const test = resolve => require(['../components/test/test'], resolve)
-const watchTest = resolve => require(['../components/test/watch-test'], resolve)
 const jsLearning = resolve => require(['../components/test/jsLearning'], resolve)
 const watchTest = resolve => require(['../components/test/watch-test'], resolve) //无限树
 const globalWatcher = resolve => require(['../components/test/globalWatcher'], resolve) //全局监听
