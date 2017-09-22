@@ -7,8 +7,6 @@
     <span @click="changeMsg">
       Change the Message
     </span>
-    <span>这里是测试环境</span>
-    <span>add1</span>
   </div>
 </template>
 <script>
